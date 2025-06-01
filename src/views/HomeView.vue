@@ -57,30 +57,17 @@
     <div class="content-below">
 <section class="section-content">
         <h2>Atractivos</h2>
-        <div class="tours-grid">
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
 
       <section class="section-content">
         <h2>Vive su magia</h2>
         <p>
-          Muchas historias confluyen en este poblado de legado minero: sus casonas y construcciones de aire inglés se combinan con el olor a pastes y pan de pulque cocinados en sus hornos; mientras el frío y la neblina llegan por la tarde, cubriendo las chimeneas de las viejas minas y los altos pinos del panteón, donde reposan algunos de los mineros ingleses que aquí trabajaron y le dieron parte de la identidad a este poblado en la montaña de Hidalgo.
+           Muchas historias confluyen en este poblado de legado minero: sus casonas y construcciones
+          de aire inglés se combinan con el olor a pastes y pan de pulque cocinados en sus hornos;
+          mientras el frío y la neblina llegan por la tarde, cubriendo las chimeneas de las viejas
+          minas y los altos pinos del panteón, donde reposan algunos de los mineros ingleses que
+          aquí trabajaron y le dieron parte de la identidad a este poblado en la montaña de Hidalgo.
         </p>
       </section>
 
@@ -117,90 +104,22 @@
 
       <section class="section-content">
         <h2>Festividades</h2>
-        <div class="festivities-grid">
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
 
       <section class="section-content">
         <h2>Hoteles</h2>
-        <div class="attractions-grid">
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
 
       <section class="section-content">
         <h2>Restaurantes</h2>
-        <div class="attractions-grid">
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
 
       <section class="section-content">
         <h2>Tours</h2>
-        <div class="tours-grid">
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
     </div>
   </section>
@@ -208,6 +127,7 @@
 
 <script lang="ts" setup>
 import Sidebar from '@/components/SidebarComponent.vue';
+import CarruselComponent from '@/components/CarruselComponent.vue';
 import { ChevronDown } from 'lucide-vue-next';
 </script>
 
@@ -279,7 +199,7 @@ import { ChevronDown } from 'lucide-vue-next';
 .section-content {
   margin-bottom: 3rem;
   max-width: 1100px;
-  margin-left: auto;
+  margin-left: 12%;
   margin-right: auto;
 }
 
@@ -499,7 +419,8 @@ import { ChevronDown } from 'lucide-vue-next';
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   max-width: 1100px;
-  margin: 0 auto 3rem;
+  margin-left: 8%;
+
 }
 
 .left-column {
