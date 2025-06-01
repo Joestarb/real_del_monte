@@ -24,6 +24,7 @@ Desarrollar una aplicación web para ayudar a las personas a llevar un mejor con
 - **Carlos Josué Oviedo Cisneros** - FULLSTACK <3
 - **Josias Efrain Kumul Quetzal** – FULLSTACK
 - **Bolon Cifuentes Miguel Angel** – FULLSTACK
+- **Garcia Canul Guillermo de Jesus** – FULLSTACK
 
 ## Tecnologías y Librerías
 
