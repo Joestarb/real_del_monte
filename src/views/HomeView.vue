@@ -8,7 +8,7 @@
       <!-- Contenido del hero -->
       <div class="content">
         <div class="logos logos-top">
-          <img class="mr-6" src="@/assets/LogoPM.png" alt="Logo" />
+          <img class="mr-6 logo-spin" src="@/assets/LogoPM.png" alt="Logo" />
           <img src="@/assets/PueblosM.svg" alt="Pueblos Mágicos" />
         </div>
 
@@ -85,35 +85,36 @@
         </p>
       </section>
 
-      <section class="section-content">
-        <h2>El motivo</h2>
-        <h3>Su pasado minero de Real del Monte</h3>
-        <p>En 1552 se descubrieron las primeras vetas de mineral en este pueblo.</p>
-        <p>Las minas son hoy museos históricos.</p>
-        <p>Españoles, ingleses, mexicanos y norteamericanos las trabajaron en diferentes épocas.</p>
-        <p>El oro y la plata dieron gran riqueza a este lugar.</p>
-      </section>
+      <div class="two-column-layout">
+        <section class="section-content left-column">
+          <h2>El motivo</h2>
+          <p>Su pasado minero de Real del Monte <br/>
+            En 1552 se descubrieron las primeras vetas de mineral en este pueblo.</p>
+          <p>Las minas son hoy museos históricos. <br/> Españoles, ingleses, mexicanos y norteamericanos las trabajaron en diferentes épocas.</p>
+          <p>El oro y la plata dieron gran riqueza a este lugar.</p>
+        </section>
 
-      <section class="section-content">
-        <h2>¿Cómo llegar?</h2>
-        <div class="transport-option">
-          <h3>Autobús:</h3>
-          <p>ADO, Flecha Roja y Futura llegan a Pachuca. De ahí, dirígete al Mercado Benito Juárez donde salen los colectivos a Real del Monte.</p>
-        </div>
-        <div class="transport-option">
-          <h3>Avión:</h3>
-          <p>ADO conecta a Pachuca con el aeropuerto de CDMX.</p>
-        </div>
-      </section>
+        <section class="section-content right-column">
+          <h2>¿Cómo llegar?</h2>
+          <div class="transport-option">
+            <h3>Autobús:</h3>
+            <p>ADO, Flecha Roja y Futura llegan a Pachuca. De ahí, dirígete al Mercado Benito Juárez donde salen los colectivos a Real del Monte.</p>
+          </div>
+          <div class="transport-option">
+            <h3>Avión:</h3>
+            <p>ADO conecta a Pachuca con el aeropuerto de CDMX.</p>
+          </div>
+        </section>
+      </div>
 
-      <section class="section-content">
-        <h2>Imprescindibles</h2>
-        <ul class="attractions-list">
-          <li>Recorrer el Museo de la Mina de la Dificultad.</li>
-          <li>Probar pastes.</li>
-          <li>Conocer las tumbas del Panteón Inglés.</li>
-        </ul>
-      </section>
+     <section class="section-content">
+  <h2>Imprescindibles</h2>
+  <ol class="imprescindibles-list">
+    <li>Recorrer el Museo de la Mina de la Dificultad.</li>
+    <li>Probar pastes.</li>
+    <li>Conocer las tumbas del Panteón Inglés.</li>
+  </ol>
+</section>
 
       <section class="section-content">
         <h2>Festividades</h2>
@@ -244,7 +245,7 @@ import { ChevronDown } from 'lucide-vue-next';
   background:
     linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 80%, transparent 100%),
     linear-gradient(to top left, rgba(0, 0, 0, 1) 0%, transparent 30%),
-    linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7) 160%);
+    linear-gradient(to top, transparent, rgba(0, 0, 0, 0.7) 100%); /* Cambiado de 'to bottom' a 'to top' */
   z-index: 1;
 }
 
@@ -260,14 +261,15 @@ import { ChevronDown } from 'lucide-vue-next';
 
 /* Estilos del contenido adicional */
 .content-below {
-  background: white;
-  color: #333;
+  background:
+    linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 0.9) 100%);
+  color: white;
   padding: 4rem 5.6rem;
 }
 
 .section-content {
   margin-bottom: 3rem;
-  max-width: 1200px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -276,26 +278,43 @@ import { ChevronDown } from 'lucide-vue-next';
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  color: #222;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+.section-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to right, #fff, transparent);
 }
 
 .section-content h3 {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 1.2rem 0 0.8rem;
-  color: #333;
+  color: #e0e0e0;
 }
 
 .section-content p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  color: #555;
+  color: #bbb;
+   max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
 }
 
 .attractions-list {
   list-style-type: disc;
   padding-left: 1.5rem;
+  color: #bbb;
 }
 
 .attractions-list li {
@@ -315,17 +334,26 @@ import { ChevronDown } from 'lucide-vue-next';
 .festivity-item,
 .attraction-item,
 .tour-item {
-  background: #f8f8f8;
+  background: rgba(30, 30, 30, 0.7);
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease;
+}
+
+.festivity-item:hover,
+.attraction-item:hover,
+.tour-item:hover {
+  transform: translateY(-5px);
+  background: rgba(50, 50, 50, 0.8);
 }
 
 .festivity-item h3,
 .attraction-item h3,
 .tour-item h3 {
   font-size: 1.2rem;
-  color: #444;
+  color: white;
   margin-bottom: 0.5rem;
 }
 
@@ -333,11 +361,21 @@ import { ChevronDown } from 'lucide-vue-next';
 .attraction-item p,
 .tour-item p {
   font-size: 1rem;
-  color: #666;
+  color: #ccc;
 }
 
 .transport-option {
   margin-bottom: 1.5rem;
+}
+
+.transport-option h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.transport-option p {
+  color: #bbb;
 }
 
 /* Mantener los estilos existentes para el hero section */
@@ -435,5 +473,78 @@ import { ChevronDown } from 'lucide-vue-next';
   width: 1.2rem;
   height: 1.2rem;
   display: block;
+}
+
+/* Animación de logo */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.logo-spin {
+  animation: spin 2s ease-in-out 1;
+}
+
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+}
+
+.left-column {
+  padding-right: 1.5rem;
+}
+
+.right-column {
+  padding-left: 1.5rem;
+}
+
+.highlight {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* Ajustes para responsividad */
+@media (max-width: 768px) {
+  .two-column-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .left-column, .right-column {
+    padding: 0;
+  }
+}
+
+.imprescindibles-list {
+  display: flex;
+  gap: 3rem;
+  list-style-type: none;
+  counter-reset: imprescindibles-counter;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.imprescindibles-list li {
+  counter-increment: imprescindibles-counter;
+  position: relative;
+  padding-left: 2.5rem;
+  font-size: 1.1rem;
+  color: #bbb;
+  flex: 1;
+  max-width: 200px;
+}
+
+.imprescindibles-list li::before {
+  content: counter(imprescindibles-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 }
 </style>
