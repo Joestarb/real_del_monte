@@ -1,208 +1,210 @@
 <template>
   <section class="realdelmonte-container">
-    <!-- Sección Hero con imagen de fondo -->
-    <div class="hero-section">
-      <img src="@/assets/real.jpeg" alt="Real del Monte" class="background-image" />
-      <div class="gradient-overlay"></div>
+    <!-- Sidebar superpuesto sobre todo -->
+    <Sidebar class="sidebar-overlay" />
 
-      <!-- Contenido del hero -->
-      <div class="content">
-        <div class="logos logos-top">
-          <img class="mr-6 logo-spin" src="@/assets/LogoPM.png" alt="Logo" />
-          <img src="@/assets/PueblosM.svg" alt="Pueblos Mágicos" />
-        </div>
+    <!-- Contenido principal (se adapta a todas las pantallas) -->
+    <div class="main-content">
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <img src="@/assets/real.jpeg" alt="Real del Monte" class="background-image" />
+        <div class="gradient-overlay"></div>
 
-        <Sidebar />
+        <div class="content">
+          <div class="logos logos-top">
+            <img class="mr-6 logo-spin" src="@/assets/LogoPM.png" alt="Logo" />
+            <img src="@/assets/PueblosM.svg" alt="Pueblos Mágicos" />
+          </div>
 
-        <div class="info-box">
-          <div class="info-text">
-            <p class="estado">Hidalgo</p>
-            <h1>Real del monte</h1>
-            <p class="descripcion">
-              Siéntate frente a una de las bellas plazas del Pueblo Mágico, mientras saboreas un delicioso paste y luego
-              descubre sus rincones que conservan un dejo británico.
-            </p>
+          <div class="info-box">
+            <div class="info-text">
+              <p class="estado">Hidalgo</p>
+              <h1>Real del monte</h1>
+              <p class="descripcion">
+                Siéntate frente a una de las bellas plazas del Pueblo Mágico, mientras saboreas un delicioso paste y luego
+                descubre sus rincones que conservan un dejo británico.
+              </p>
 
-            <!-- Clima -->
-            <div class="flex items-center gap-6 mt-6">
-              <div class="flex items-center gap-2">
-                <span class="text-2xl">☁️</span>
-                <div class="text-sm">
-                  <div class="font-semibold">Clima actual</div>
-                  Lluvia ligera
+              <!-- Clima -->
+              <div class="flex items-center gap-6 mt-6">
+                <div class="flex items-center gap-2">
+                  <span class="text-2xl">☁️</span>
+                  <div class="text-sm">
+                    <div class="font-semibold">Clima actual</div>
+                    Lluvia ligera
+                  </div>
                 </div>
-              </div>
-              <div class="text-3xl font-bold">11°</div>
-              <div class="text-3xl">|</div>
-              <div class="text-sm">
-                <div class="font-semibold">Humedad</div>
-                95%
+                <div class="text-3xl font-bold">11°</div>
+                <div class="text-3xl">|</div>
+                <div class="text-sm">
+                  <div class="font-semibold">Humedad</div>
+                  95%
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="mapa">
+            <img src="@/assets/Mexico_Map.svg" alt="Mapa de México" />
+            <div class="pin">📍</div>
+          </div>
+
+          <button class="conoce-mas conoce-mas-bottom">Conoce más
+            <ChevronDown class="chevron-bottom" />
+          </button>
         </div>
-
-        <div class="mapa">
-          <img src="@/assets/Mexico_Map.svg" alt="Mapa de México" />
-          <div class="pin">📍</div>
-        </div>
-
-        <!-- Botón Conoce más -->
-        <button class="conoce-mas conoce-mas-bottom">Conoce más
-          <ChevronDown class="chevron-bottom" />
-        </button>
-      </div>
-    </div>
-
-    <!-- Contenido adicional scrollable -->
-    <div class="content-below">
-<section class="section-content">
-        <h2>Atractivos</h2>
-        <div class="tours-grid">
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-content">
-        <h2>Vive su magia</h2>
-        <p>
-          Muchas historias confluyen en este poblado de legado minero: sus casonas y construcciones de aire inglés se combinan con el olor a pastes y pan de pulque cocinados en sus hornos; mientras el frío y la neblina llegan por la tarde, cubriendo las chimeneas de las viejas minas y los altos pinos del panteón, donde reposan algunos de los mineros ingleses que aquí trabajaron y le dieron parte de la identidad a este poblado en la montaña de Hidalgo.
-        </p>
-      </section>
-
-      <div class="two-column-layout">
-        <section class="section-content left-column">
-          <h2>El motivo</h2>
-          <p>Su pasado minero de Real del Monte <br/>
-            En 1552 se descubrieron las primeras vetas de mineral en este pueblo.</p>
-          <p>Las minas son hoy museos históricos. <br/> Españoles, ingleses, mexicanos y norteamericanos las trabajaron en diferentes épocas.</p>
-          <p>El oro y la plata dieron gran riqueza a este lugar.</p>
-        </section>
-
-        <section class="section-content right-column">
-          <h2>¿Cómo llegar?</h2>
-          <div class="transport-option">
-            <h3>Autobús:</h3>
-            <p>ADO, Flecha Roja y Futura llegan a Pachuca. De ahí, dirígete al Mercado Benito Juárez donde salen los colectivos a Real del Monte.</p>
-          </div>
-          <div class="transport-option">
-            <h3>Avión:</h3>
-            <p>ADO conecta a Pachuca con el aeropuerto de CDMX.</p>
-          </div>
-        </section>
       </div>
 
-     <section class="section-content">
-  <h2>Imprescindibles</h2>
-  <ol class="imprescindibles-list">
-    <li>Recorrer el Museo de la Mina de la Dificultad.</li>
-    <li>Probar pastes.</li>
-    <li>Conocer las tumbas del Panteón Inglés.</li>
-  </ol>
-</section>
+      <!-- Contenido adicional -->
+      <div class="content-below">
+        <section class="section-content">
+          <h2>Atractivos</h2>
+          <div class="tours-grid">
+            <div class="tour-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Descubre los rumbos del centro</p>
+            </div>
+            <div class="tour-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Elabora tu paste</p>
+            </div>
+            <div class="tour-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>La Peña del Zumate</p>
+            </div>
+            <div class="tour-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Mina de Acú</p>
+            </div>
+          </div>
+        </section>
 
-      <section class="section-content">
-        <h2>Festividades</h2>
-        <div class="festivities-grid">
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
-      </section>
+        <section class="section-content">
+          <h2>Vive su magia</h2>
+          <p>
+            Muchas historias confluyen en este poblado de legado minero: sus casonas y construcciones de aire inglés se combinan con el olor a pastes y pan de pulque cocinados en sus hornos; mientras el frío y la neblina llegan por la tarde, cubriendo las chimeneas de las viejas minas y los altos pinos del panteón, donde reposan algunos de los mineros ingleses que aquí trabajaron y le dieron parte de la identidad a este poblado en la montaña de Hidalgo.
+          </p>
+        </section>
 
-      <section class="section-content">
-        <h2>Hoteles</h2>
-        <div class="attractions-grid">
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
-      </section>
+        <div class="two-column-layout">
+          <section class="section-content left-column">
+            <h2>El motivo</h2>
+            <p>Su pasado minero de Real del Monte <br/>
+              En 1552 se descubrieron las primeras vetas de mineral en este pueblo.</p>
+            <p>Las minas son hoy museos históricos. <br/> Españoles, ingleses, mexicanos y norteamericanos las trabajaron en diferentes épocas.</p>
+            <p>El oro y la plata dieron gran riqueza a este lugar.</p>
+          </section>
 
-      <section class="section-content">
-        <h2>Restaurantes</h2>
-        <div class="attractions-grid">
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
+          <section class="section-content right-column">
+            <h2>¿Cómo llegar?</h2>
+            <div class="transport-option">
+              <h3>Autobús:</h3>
+              <p>ADO, Flecha Roja y Futura llegan a Pachuca. De ahí, dirígete al Mercado Benito Juárez donde salen los colectivos a Real del Monte.</p>
+            </div>
+            <div class="transport-option">
+              <h3>Avión:</h3>
+              <p>ADO conecta a Pachuca con el aeropuerto de CDMX.</p>
+            </div>
+          </section>
         </div>
-      </section>
 
-      <section class="section-content">
-        <h2>Tours</h2>
-        <div class="tours-grid">
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
+        <section class="section-content">
+          <h2>Imprescindibles</h2>
+          <ol class="imprescindibles-list">
+            <li>Recorrer el Museo de la Mina de la Dificultad.</li>
+            <li>Probar pastes.</li>
+            <li>Conocer las tumbas del Panteón Inglés.</li>
+          </ol>
+        </section>
+
+        <section class="section-content">
+          <h2>Festividades</h2>
+          <div class="festivities-grid">
+            <div class="festivity-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Descubre los rumbos del centro</p>
+            </div>
+            <div class="festivity-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Elabora tu paste</p>
+            </div>
+            <div class="festivity-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>La Peña del Zumate</p>
+            </div>
+            <div class="festivity-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Mina de Acú</p>
+            </div>
           </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
+        </section>
+
+        <section class="section-content">
+          <h2>Hoteles</h2>
+          <div class="attractions-grid">
+            <div class="attraction-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Descubre los rumbos del centro</p>
+            </div>
+            <div class="attraction-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Elabora tu paste</p>
+            </div>
+            <div class="attraction-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>La Peña del Zumate</p>
+            </div>
+            <div class="attraction-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Mina de Acú</p>
+            </div>
           </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
+        </section>
+
+        <section class="section-content">
+          <h2>Restaurantes</h2>
+          <div class="attractions-grid">
+            <div class="attraction-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Descubre los rumbos del centro</p>
+            </div>
+            <div class="attraction-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Elabora tu paste</p>
+            </div>
+            <div class="attraction-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>La Peña del Zumate</p>
+            </div>
+            <div class="attraction-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Mina de Acú</p>
+            </div>
           </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
+        </section>
+
+        <section class="section-content">
+          <h2>Tours</h2>
+          <div class="tours-grid">
+            <div class="tour-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Descubre los rumbos del centro</p>
+            </div>
+            <div class="tour-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Elabora tu paste</p>
+            </div>
+            <div class="tour-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>La Peña del Zumate</p>
+            </div>
+            <div class="tour-item">
+              <h3>REAL DEL MONTE</h3>
+              <p>Mina de Acú</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   </section>
 </template>
@@ -213,16 +215,35 @@ import { ChevronDown } from 'lucide-vue-next';
 </script>
 
 <style scoped>
-/* Estilos existentes del hero section */
+/* Estilos base */
 .realdelmonte-container {
   position: relative;
   width: 100%;
   font-family: sans-serif;
   color: white;
-  overflow-y: auto;
-  height: 100vh;
+  min-height: 100vh;
 }
 
+/* Sidebar superpuesto */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100vh;
+  width: 320px;
+  background: rgba(0, 0, 0, 0.8); /* Fondo semitransparente para mejor legibilidad */
+  backdrop-filter: blur(5px); /* Efecto de desenfoque */
+}
+
+/* Contenido principal - ocupa todo el ancho pero con padding para no quedar detrás del sidebar */
+.main-content {
+  width: 100%;
+  padding-left: 320px; /* Igual al ancho del sidebar */
+  box-sizing: border-box;
+}
+
+/* Hero Section */
 .hero-section {
   position: relative;
   width: 100%;
@@ -245,7 +266,7 @@ import { ChevronDown } from 'lucide-vue-next';
   background:
     linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 80%, transparent 100%),
     linear-gradient(to top left, rgba(0, 0, 0, 1) 0%, transparent 30%),
-    linear-gradient(to top, transparent, rgba(0, 0, 0, 0.7) 100%); /* Cambiado de 'to bottom' a 'to top' */
+    linear-gradient(to top, transparent, rgba(0, 0, 0, 0.7) 100%);
   z-index: 1;
 }
 
@@ -255,16 +276,139 @@ import { ChevronDown } from 'lucide-vue-next';
   align-items: center;
   height: 100%;
   z-index: 2;
-  padding-left: 5.6rem;
-  padding-top: 2rem;
+  padding: 2rem 5%;
 }
 
-/* Estilos del contenido adicional */
+/* Elementos del hero */
+.info-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  justify-content: center;
+  max-width: 550px;
+  color: white;
+}
+
+.info-text .estado {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #e0e0e0;
+  margin-bottom: 0.3rem;
+}
+
+.info-text h1 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.info-text .descripcion {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  max-width: 450px;
+}
+
+.mapa {
+  position: absolute;
+  bottom: 12rem;
+  right: 5%;
+  width: 320px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapa img {
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 0.5rem;
+}
+
+.pin {
+  position: absolute;
+  top: 46%;
+  left: 43%;
+  font-size: 1.6rem;
+  color: black;
+}
+
+.logos {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.logos img {
+  height: 60px;
+  object-fit: contain;
+}
+
+.logos-top {
+  position: absolute;
+  top: 4.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0;
+  margin-bottom: 0;
+  z-index: 10;
+  background: none;
+}
+
+.conoce-mas-bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 6.9rem;
+  transform: translateX(-50%);
+  margin-bottom: 0;
+  z-index: 10;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.conoce-mas-bottom:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-50%) scale(1.05);
+}
+
+.chevron-bottom {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: block;
+  margin-top: 0.25rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Contenido adicional */
 .content-below {
   background:
     linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 0.9) 100%);
   color: white;
-  padding: 4rem 5.6rem;
+  padding: 4rem 5%;
 }
 
 .section-content {
@@ -305,26 +449,15 @@ import { ChevronDown } from 'lucide-vue-next';
   line-height: 1.6;
   margin-bottom: 1rem;
   color: #bbb;
-   max-width: 900px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1rem;
 }
 
-.attractions-list {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  color: #bbb;
-}
-
-.attractions-list li {
-  margin-bottom: 0.8rem;
-  font-size: 1.1rem;
-}
-
+.tours-grid,
 .festivities-grid,
-.attractions-grid,
-.tours-grid {
+.attractions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
@@ -339,7 +472,7 @@ import { ChevronDown } from 'lucide-vue-next';
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .festivity-item:hover,
@@ -347,6 +480,7 @@ import { ChevronDown } from 'lucide-vue-next';
 .tour-item:hover {
   transform: translateY(-5px);
   background: rgba(50, 50, 50, 0.8);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .festivity-item h3,
@@ -362,127 +496,6 @@ import { ChevronDown } from 'lucide-vue-next';
 .tour-item p {
   font-size: 1rem;
   color: #ccc;
-}
-
-.transport-option {
-  margin-bottom: 1.5rem;
-}
-
-.transport-option h3 {
-  color: #fff;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-.transport-option p {
-  color: #bbb;
-}
-
-/* Mantener los estilos existentes para el hero section */
-.mapa {
-  position: absolute;
-  bottom: 12rem;
-  right: 22rem;
-  width: 320px;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mapa img {
-  width: 100%;
-  opacity: 0.9;
-  border-radius: 0.5rem;
-}
-
-.pin {
-  position: absolute;
-  top: 46%;
-  left: 43%;
-  font-size: 1.6rem;
-  color: black;
-}
-
-.info-box {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2%;
-  justify-content: center;
-  max-width: 550px;
-  color: white;
-}
-
-.info-text .estado {
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: #e0e0e0;
-  margin-bottom: 0.3rem;
-}
-
-.info-text h1 {
-  font-size: 2.3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.info-text .descripcion {
-  font-size: 1.1rem;
-  color: #e0e0e0;
-  margin-bottom: 2rem;
-  line-height: 1.5;
-  max-width: 450px;
-}
-
-.logos {
-  display: flex;
-  margin-bottom: 1rem;
-}
-
-.logos img {
-  height: 60px;
-  object-fit: contain;
-}
-
-.logos-top {
-  position: absolute;
-  top: 4.3rem;
-  left: 56%;
-  transform: translateX(-50%);
-  margin-top: 0;
-  margin-bottom: 0;
-  z-index: 10;
-  background: none;
-}
-
-.conoce-mas-bottom {
-  position: absolute;
-  left: 57%;
-  bottom: 6.9rem;
-  transform: translateX(-50%);
-  margin-bottom: 0;
-  z-index: 10;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.chevron-bottom {
-  width: 1.2rem;
-  height: 1.2rem;
-  display: block;
-}
-
-/* Animación de logo */
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.logo-spin {
-  animation: spin 2s ease-in-out 1;
 }
 
 .two-column-layout {
@@ -501,22 +514,18 @@ import { ChevronDown } from 'lucide-vue-next';
   padding-left: 1.5rem;
 }
 
-.highlight {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #fff;
-  margin-bottom: 1rem;
+.transport-option {
+  margin-bottom: 1.5rem;
 }
 
-/* Ajustes para responsividad */
-@media (max-width: 768px) {
-  .two-column-layout {
-    grid-template-columns: 1fr;
-  }
+.transport-option h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
 
-  .left-column, .right-column {
-    padding: 0;
-  }
+.transport-option p {
+  color: #bbb;
 }
 
 .imprescindibles-list {
@@ -546,5 +555,138 @@ import { ChevronDown } from 'lucide-vue-next';
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
+}
+
+/* Animación de logo */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.logo-spin {
+  animation: spin 2s ease-in-out 1;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 1200px) {
+  .mapa {
+    width: 280px;
+  }
+
+  .section-content {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar-overlay {
+    width: 280px;
+  }
+
+  .main-content {
+    padding-left: 280px;
+  }
+
+  .mapa {
+    width: 240px;
+  }
+
+  .info-text h1 {
+    font-size: 2rem;
+  }
+
+  .two-column-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .left-column,
+  .right-column {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* El sidebar sigue superpuesto pero el contenido ocupa todo el ancho */
+  .main-content {
+    padding-left: 0;
+  }
+
+  .mapa {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .content {
+    flex-direction: column;
+    padding-top: 6rem;
+    text-align: center;
+  }
+
+  .info-box {
+    margin-top: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-text .descripcion {
+    max-width: 100%;
+  }
+
+  .logos-top {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto 2rem;
+    justify-content: center;
+  }
+
+  .conoce-mas-bottom {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin: 2rem auto;
+  }
+
+  .tours-grid,
+  .festivities-grid,
+  .attractions-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .content-below {
+    padding: 2rem 1rem;
+  }
+
+  .mapa {
+    width: 100%;
+  }
+
+  .section-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .imprescindibles-list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .imprescindibles-list li {
+    max-width: 100%;
+  }
+
+  .tours-grid,
+  .festivities-grid,
+  .attractions-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
