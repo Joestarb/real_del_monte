@@ -16,29 +16,10 @@
 
         <div class="info-box">
           <div class="info-text">
-            <p class="estado">Hidalgo</p>
-            <h1>Real del monte</h1>
-            <p class="descripcion">
-              Siéntate frente a una de las bellas plazas del Pueblo Mágico, mientras saboreas un
-              delicioso paste y luego descubre sus rincones que conservan un dejo británico.
-            </p>
+     
 
             <!-- Clima -->
-            <div class="flex items-center gap-6 mt-6">
-              <div class="flex items-center gap-2">
-                <span class="text-2xl">☁️</span>
-                <div class="text-sm">
-                  <div class="font-semibold">Clima actual</div>
-                  Lluvia ligera
-                </div>
-              </div>
-              <div class="text-3xl font-bold">11°</div>
-              <div class="text-3xl">|</div>
-              <div class="text-sm">
-                <div class="font-semibold">Humedad</div>
-                95%
-              </div>
-            </div>
+            <InfoComponent/>
           </div>
         </div>
 
@@ -139,6 +120,7 @@
 import Sidebar from '@/components/SidebarComponent.vue'
 import CarruselComponent from '@/components/CarruselComponent.vue'
 import { ChevronDown } from 'lucide-vue-next'
+import InfoComponent from '@/components/InfoComponent.vue';
 </script>
 
 <style scoped>
