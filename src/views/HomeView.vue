@@ -19,8 +19,8 @@
             <p class="estado">Hidalgo</p>
             <h1>Real del monte</h1>
             <p class="descripcion">
-              Siéntate frente a una de las bellas plazas del Pueblo Mágico, mientras saboreas un delicioso paste y luego
-              descubre sus rincones que conservan un dejo británico.
+              Siéntate frente a una de las bellas plazas del Pueblo Mágico, mientras saboreas un
+              delicioso paste y luego descubre sus rincones que conservan un dejo británico.
             </p>
 
             <!-- Clima -->
@@ -48,7 +48,8 @@
         </div>
 
         <!-- Botón Conoce más -->
-        <button class="conoce-mas conoce-mas-bottom">Conoce más
+        <button class="conoce-mas conoce-mas-bottom">
+          Conoce más
           <ChevronDown class="chevron-bottom" />
         </button>
       </div>
@@ -56,41 +57,33 @@
 
     <!-- Contenido adicional scrollable -->
     <div class="content-below">
-<section class="section-content">
+      <section class="section-content">
         <h2>Atractivos</h2>
-        <div class="tours-grid">
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
 
       <section class="section-content">
         <h2>Vive su magia</h2>
         <p>
-          Muchas historias confluyen en este poblado de legado minero: sus casonas y construcciones de aire inglés se combinan con el olor a pastes y pan de pulque cocinados en sus hornos; mientras el frío y la neblina llegan por la tarde, cubriendo las chimeneas de las viejas minas y los altos pinos del panteón, donde reposan algunos de los mineros ingleses que aquí trabajaron y le dieron parte de la identidad a este poblado en la montaña de Hidalgo.
+          Muchas historias confluyen en este poblado de legado minero: sus casonas y construcciones
+          de aire inglés se combinan con el olor a pastes y pan de pulque cocinados en sus hornos;
+          mientras el frío y la neblina llegan por la tarde, cubriendo las chimeneas de las viejas
+          minas y los altos pinos del panteón, donde reposan algunos de los mineros ingleses que
+          aquí trabajaron y le dieron parte de la identidad a este poblado en la montaña de Hidalgo.
         </p>
       </section>
 
       <div class="two-column-layout">
         <section class="section-content left-column">
           <h2>El motivo</h2>
-          <p>Su pasado minero de Real del Monte <br/>
-            En 1552 se descubrieron las primeras vetas de mineral en este pueblo.</p>
-          <p>Las minas son hoy museos históricos. <br/> Españoles, ingleses, mexicanos y norteamericanos las trabajaron en diferentes épocas.</p>
+          <p>
+            Su pasado minero de Real del Monte <br />
+            En 1552 se descubrieron las primeras vetas de mineral en este pueblo.
+          </p>
+          <p>
+            Las minas son hoy museos históricos. <br />
+            Españoles, ingleses, mexicanos y norteamericanos las trabajaron en diferentes épocas.
+          </p>
           <p>El oro y la plata dieron gran riqueza a este lugar.</p>
         </section>
 
@@ -98,7 +91,10 @@
           <h2>¿Cómo llegar?</h2>
           <div class="transport-option">
             <h3>Autobús:</h3>
-            <p>ADO, Flecha Roja y Futura llegan a Pachuca. De ahí, dirígete al Mercado Benito Juárez donde salen los colectivos a Real del Monte.</p>
+            <p>
+              ADO, Flecha Roja y Futura llegan a Pachuca. De ahí, dirígete al Mercado Benito Juárez
+              donde salen los colectivos a Real del Monte.
+            </p>
           </div>
           <div class="transport-option">
             <h3>Avión:</h3>
@@ -107,109 +103,42 @@
         </section>
       </div>
 
-     <section class="section-content">
-  <h2>Imprescindibles</h2>
-  <ol class="imprescindibles-list">
-    <li>Recorrer el Museo de la Mina de la Dificultad.</li>
-    <li>Probar pastes.</li>
-    <li>Conocer las tumbas del Panteón Inglés.</li>
-  </ol>
-</section>
+      <section class="section-content">
+        <h2>Imprescindibles</h2>
+        <ol class="imprescindibles-list">
+          <li>Recorrer el Museo de la Mina de la Dificultad.</li>
+          <li>Probar pastes.</li>
+          <li>Conocer las tumbas del Panteón Inglés.</li>
+        </ol>
+      </section>
 
       <section class="section-content">
         <h2>Festividades</h2>
-        <div class="festivities-grid">
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
 
       <section class="section-content">
         <h2>Hoteles</h2>
-        <div class="attractions-grid">
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
 
       <section class="section-content">
         <h2>Restaurantes</h2>
-        <div class="attractions-grid">
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
 
       <section class="section-content">
         <h2>Tours</h2>
-        <div class="tours-grid">
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
-import Sidebar from '@/components/SidebarComponent.vue';
-import { ChevronDown } from 'lucide-vue-next';
+import Sidebar from '@/components/SidebarComponent.vue'
+import CarruselComponent from '@/components/CarruselComponent.vue'
+import { ChevronDown } from 'lucide-vue-next'
 </script>
 
 <style scoped>
@@ -243,7 +172,13 @@ import { ChevronDown } from 'lucide-vue-next';
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 80%, transparent 100%),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.3) 40%,
+      rgba(0, 0, 0, 0.3) 80%,
+      transparent 100%
+    ),
     linear-gradient(to top left, rgba(0, 0, 0, 1) 0%, transparent 30%),
     linear-gradient(to top, transparent, rgba(0, 0, 0, 0.7) 100%); /* Cambiado de 'to bottom' a 'to top' */
   z-index: 1;
@@ -261,8 +196,7 @@ import { ChevronDown } from 'lucide-vue-next';
 
 /* Estilos del contenido adicional */
 .content-below {
-  background:
-    linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 0.9) 100%);
   color: white;
   padding: 4rem 5.6rem;
 }
@@ -305,7 +239,7 @@ import { ChevronDown } from 'lucide-vue-next';
   line-height: 1.6;
   margin-bottom: 1rem;
   color: #bbb;
-   max-width: 900px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1rem;
@@ -477,8 +411,12 @@ import { ChevronDown } from 'lucide-vue-next';
 
 /* Animación de logo */
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .logo-spin {
@@ -514,7 +452,8 @@ import { ChevronDown } from 'lucide-vue-next';
     grid-template-columns: 1fr;
   }
 
-  .left-column, .right-column {
+  .left-column,
+  .right-column {
     padding: 0;
   }
 }
