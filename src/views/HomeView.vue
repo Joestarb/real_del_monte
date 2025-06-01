@@ -1,5 +1,7 @@
 <template>
   <section class="realdelmonte-container">
+        <Sidebar class="sidebar-fixed" /> <!-- Sidebar fuera del hero y con clase fija -->
+
     <!-- Sección Hero con imagen de fondo -->
     <div class="hero-section">
       <img src="@/assets/real.jpeg" alt="Real del Monte" class="background-image" />
@@ -12,13 +14,8 @@
           <img src="@/assets/PueblosM.svg" alt="Pueblos Mágicos" />
         </div>
 
-        <Sidebar />
-
         <div class="info-box">
           <div class="info-text">
-     
-
-            <!-- Clima -->
             <InfoComponent/>
           </div>
         </div>
@@ -29,8 +26,7 @@
         </div>
 
         <!-- Botón Conoce más -->
-        <button class="conoce-mas conoce-mas-bottom">
-          Conoce más
+        <button class="conoce-mas conoce-mas-bottom">Conoce más
           <ChevronDown class="chevron-bottom" />
         </button>
       </div>
@@ -38,7 +34,7 @@
 
     <!-- Contenido adicional scrollable -->
     <div class="content-below">
-      <section class="section-content">
+<section class="section-content">
         <h2>Atractivos</h2>
         <CarruselComponent />
       </section>
@@ -46,7 +42,7 @@
       <section class="section-content">
         <h2>Vive su magia</h2>
         <p>
-          Muchas historias confluyen en este poblado de legado minero: sus casonas y construcciones
+           Muchas historias confluyen en este poblado de legado minero: sus casonas y construcciones
           de aire inglés se combinan con el olor a pastes y pan de pulque cocinados en sus hornos;
           mientras el frío y la neblina llegan por la tarde, cubriendo las chimeneas de las viejas
           minas y los altos pinos del panteón, donde reposan algunos de los mineros ingleses que
@@ -57,14 +53,9 @@
       <div class="two-column-layout">
         <section class="section-content left-column">
           <h2>El motivo</h2>
-          <p>
-            Su pasado minero de Real del Monte <br />
-            En 1552 se descubrieron las primeras vetas de mineral en este pueblo.
-          </p>
-          <p>
-            Las minas son hoy museos históricos. <br />
-            Españoles, ingleses, mexicanos y norteamericanos las trabajaron en diferentes épocas.
-          </p>
+          <p>Su pasado minero de Real del Monte <br/>
+            En 1552 se descubrieron las primeras vetas de mineral en este pueblo.</p>
+          <p>Las minas son hoy museos históricos. <br/> Españoles, ingleses, mexicanos y norteamericanos las trabajaron en diferentes épocas.</p>
           <p>El oro y la plata dieron gran riqueza a este lugar.</p>
         </section>
 
@@ -72,10 +63,7 @@
           <h2>¿Cómo llegar?</h2>
           <div class="transport-option">
             <h3>Autobús:</h3>
-            <p>
-              ADO, Flecha Roja y Futura llegan a Pachuca. De ahí, dirígete al Mercado Benito Juárez
-              donde salen los colectivos a Real del Monte.
-            </p>
+            <p>ADO, Flecha Roja y Futura llegan a Pachuca. De ahí, dirígete al Mercado Benito Juárez donde salen los colectivos a Real del Monte.</p>
           </div>
           <div class="transport-option">
             <h3>Avión:</h3>
@@ -84,14 +72,14 @@
         </section>
       </div>
 
-      <section class="section-content">
-        <h2>Imprescindibles</h2>
-        <ol class="imprescindibles-list">
-          <li>Recorrer el Museo de la Mina de la Dificultad.</li>
-          <li>Probar pastes.</li>
-          <li>Conocer las tumbas del Panteón Inglés.</li>
-        </ol>
-      </section>
+     <section class="section-content">
+  <h2>Imprescindibles</h2>
+  <ol class="imprescindibles-list">
+    <li>Recorrer el Museo de la Mina de la Dificultad.</li>
+    <li>Probar pastes.</li>
+    <li>Conocer las tumbas del Panteón Inglés.</li>
+  </ol>
+</section>
 
       <section class="section-content">
         <h2>Festividades</h2>
@@ -117,10 +105,10 @@
 </template>
 
 <script lang="ts" setup>
-import Sidebar from '@/components/SidebarComponent.vue'
-import CarruselComponent from '@/components/CarruselComponent.vue'
-import { ChevronDown } from 'lucide-vue-next'
+import Sidebar from '@/components/SidebarComponent.vue';
+import CarruselComponent from '@/components/CarruselComponent.vue';
 import InfoComponent from '@/components/InfoComponent.vue';
+import { ChevronDown } from 'lucide-vue-next';
 </script>
 
 <style scoped>
@@ -132,6 +120,16 @@ import InfoComponent from '@/components/InfoComponent.vue';
   color: white;
   overflow-y: auto;
   height: 100vh;
+}
+/* Sidebar fijo sobre toda la página */
+.sidebar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  height: 100vh;
+  width: 320px;
+
 }
 
 .hero-section {
@@ -154,13 +152,7 @@ import InfoComponent from '@/components/InfoComponent.vue';
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(
-      to right,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.3) 40%,
-      rgba(0, 0, 0, 0.3) 80%,
-      transparent 100%
-    ),
+    linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 80%, transparent 100%),
     linear-gradient(to top left, rgba(0, 0, 0, 1) 0%, transparent 30%),
     linear-gradient(to top, transparent, rgba(0, 0, 0, 0.7) 100%); /* Cambiado de 'to bottom' a 'to top' */
   z-index: 1;
@@ -172,13 +164,14 @@ import InfoComponent from '@/components/InfoComponent.vue';
   align-items: center;
   height: 100%;
   z-index: 2;
-  padding-left: 5.6rem;
+  margin-left: 20rem;
   padding-top: 2rem;
 }
 
 /* Estilos del contenido adicional */
 .content-below {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 0.9) 100%);
+  background:
+    linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 0.9) 100%);
   color: white;
   padding: 4rem 5.6rem;
 }
@@ -186,7 +179,7 @@ import InfoComponent from '@/components/InfoComponent.vue';
 .section-content {
   margin-bottom: 3rem;
   max-width: 1100px;
-  margin-left: auto;
+  margin-left: 12%;
   margin-right: auto;
 }
 
@@ -221,7 +214,7 @@ import InfoComponent from '@/components/InfoComponent.vue';
   line-height: 1.6;
   margin-bottom: 1rem;
   color: #bbb;
-  max-width: 900px;
+   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1rem;
@@ -364,7 +357,7 @@ import InfoComponent from '@/components/InfoComponent.vue';
 .logos-top {
   position: absolute;
   top: 4.3rem;
-  left: 56%;
+  left: 45%;
   transform: translateX(-50%);
   margin-top: 0;
   margin-bottom: 0;
@@ -374,7 +367,7 @@ import InfoComponent from '@/components/InfoComponent.vue';
 
 .conoce-mas-bottom {
   position: absolute;
-  left: 57%;
+  left: 45%;
   bottom: 6.9rem;
   transform: translateX(-50%);
   margin-bottom: 0;
@@ -393,12 +386,8 @@ import InfoComponent from '@/components/InfoComponent.vue';
 
 /* Animación de logo */
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .logo-spin {
@@ -410,7 +399,8 @@ import InfoComponent from '@/components/InfoComponent.vue';
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   max-width: 1100px;
-  margin: 0 auto 3rem;
+  margin-left: 8%;
+
 }
 
 .left-column {
@@ -434,8 +424,7 @@ import InfoComponent from '@/components/InfoComponent.vue';
     grid-template-columns: 1fr;
   }
 
-  .left-column,
-  .right-column {
+  .left-column, .right-column {
     padding: 0;
   }
 }

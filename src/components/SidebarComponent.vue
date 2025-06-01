@@ -36,13 +36,15 @@ const icons = [
 .sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 2.2rem;
+  justify-content: space-evenly;
+  align-items: center;
   font-size: 1.9rem;
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem 0.5rem;
   border-radius: 1rem;
-  margin-right: 14.5rem;
-  height: fit-content;
+  height: 100vh;
+  min-width: 70px;
+  width: 90px;
+  box-sizing: border-box;
 }
 .sidebar__icon-wrapper {
   display: flex;
@@ -50,7 +52,7 @@ const icons = [
   position: relative;
 }
 .sidebar__label {
-  margin-left: 2.5rem;
+  margin-left: 3.2rem;
   color: #ffd600;
   padding: 0.3rem 0.8rem;
   border-radius: 0.5rem;
@@ -72,25 +74,18 @@ const icons = [
     transform: translateX(0);
   }
 }
+/* Tamaño adaptable de iconos: grandes solo en monitores grandes */
 .icon__home {
-  width: 20rem;
-  height: 20rem;
-  min-width: 2.5rem;
-  min-height: 2.5rem;
-  max-width: 3rem;
-  max-height: 3.5rem;
+  width: clamp(2rem, 4.5vw, 4.5rem);
+  height: clamp(2rem, 4.5vw, 4.5rem);
   object-fit: contain;
   cursor: pointer;
   filter: brightness(0) invert(1);
   transition: filter 0.2s;
 }
 .icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  min-width: 2.5rem;
-  min-height: 2.5rem;
-  max-width: 2.5rem;
-  max-height: 2.5rem;
+  width: clamp(2rem, 3.5vw, 3.5rem);
+  height: clamp(2rem, 3.5vw, 3.5rem);
   object-fit: contain;
   cursor: pointer;
   filter: brightness(0) invert(1);
@@ -100,5 +95,39 @@ const icons = [
 .icon__home:hover {
   filter: brightness(0) saturate(100%) invert(80%) sepia(40%) saturate(2500%) hue-rotate(1deg)
     brightness(90%);
+}
+
+/* Pantallas medianas: iconos normales/chicos */
+@media (max-width: 1200px) {
+  .icon__home {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  .icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+/* Pantallas pequeñas: iconos pequeños y barra más angosta */
+@media (max-width: 600px) {
+  .sidebar {
+    min-width: 40px;
+    width: 48px;
+    padding: 0.5rem 0.1rem;
+  }
+  .icon__home {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  .sidebar__label {
+    font-size: 0.9rem;
+    margin-left: 0.4rem;
+    padding: 0.1rem 0.3rem;
+  }
 }
 </style>
