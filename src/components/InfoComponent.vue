@@ -16,7 +16,7 @@
               v-if="weather.icono"
               :src="`https://openweathermap.org/img/wn/${weather.icono}@2x.png`"
               alt="icono clima"
-              style="width: 32px; height: 32px"
+              style="width: 40px; height: 40px"
             />
             <span v-else>☁️</span>
           </span>

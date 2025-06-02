@@ -1,5 +1,7 @@
 <template>
   <section class="realdelmonte-container">
+        <Sidebar class="sidebar-fixed" /> <!-- Sidebar fuera del hero y con clase fija -->
+
     <!-- Sección Hero con imagen de fondo -->
     <div class="hero-section">
       <img src="@/assets/real.jpeg" alt="Real del Monte" class="background-image" />
@@ -12,40 +14,13 @@
           <img src="@/assets/PueblosM.svg" alt="Pueblos Mágicos" />
         </div>
 
-        <Sidebar />
+        <div class="info-mapa-container">
+  <InfoComponent />
+  <div class="mapa">
+    <img src="@/assets/Mexico_Map.svg" alt="Mapa de México" />
+ <MapPin class="fill-black stroke-black w-7 h-7 pin" />  </div>
+</div>
 
-        <div class="info-box">
-          <div class="info-text">
-            <p class="estado">Hidalgo</p>
-            <h1>Real del monte</h1>
-            <p class="descripcion">
-              Siéntate frente a una de las bellas plazas del Pueblo Mágico, mientras saboreas un delicioso paste y luego
-              descubre sus rincones que conservan un dejo británico.
-            </p>
-
-            <!-- Clima -->
-            <div class="flex items-center gap-6 mt-6">
-              <div class="flex items-center gap-2">
-                <span class="text-2xl">☁️</span>
-                <div class="text-sm">
-                  <div class="font-semibold">Clima actual</div>
-                  Lluvia ligera
-                </div>
-              </div>
-              <div class="text-3xl font-bold">11°</div>
-              <div class="text-3xl">|</div>
-              <div class="text-sm">
-                <div class="font-semibold">Humedad</div>
-                95%
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mapa">
-          <img src="@/assets/Mexico_Map.svg" alt="Mapa de México" />
-          <div class="pin">📍</div>
-        </div>
 
         <!-- Botón Conoce más -->
         <button class="conoce-mas conoce-mas-bottom">Conoce más
@@ -58,30 +33,17 @@
     <div class="content-below">
 <section class="section-content">
         <h2>Atractivos</h2>
-        <div class="tours-grid">
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
 
       <section class="section-content">
         <h2>Vive su magia</h2>
         <p>
-          Muchas historias confluyen en este poblado de legado minero: sus casonas y construcciones de aire inglés se combinan con el olor a pastes y pan de pulque cocinados en sus hornos; mientras el frío y la neblina llegan por la tarde, cubriendo las chimeneas de las viejas minas y los altos pinos del panteón, donde reposan algunos de los mineros ingleses que aquí trabajaron y le dieron parte de la identidad a este poblado en la montaña de Hidalgo.
+           Muchas historias confluyen en este poblado de legado minero: sus casonas y construcciones
+          de aire inglés se combinan con el olor a pastes y pan de pulque cocinados en sus hornos;
+          mientras el frío y la neblina llegan por la tarde, cubriendo las chimeneas de las viejas
+          minas y los altos pinos del panteón, donde reposan algunos de los mineros ingleses que
+          aquí trabajaron y le dieron parte de la identidad a este poblado en la montaña de Hidalgo.
         </p>
       </section>
 
@@ -118,90 +80,22 @@
 
       <section class="section-content">
         <h2>Festividades</h2>
-        <div class="festivities-grid">
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="festivity-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
 
       <section class="section-content">
         <h2>Hoteles</h2>
-        <div class="attractions-grid">
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
 
       <section class="section-content">
         <h2>Restaurantes</h2>
-        <div class="attractions-grid">
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="attraction-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
 
       <section class="section-content">
         <h2>Tours</h2>
-        <div class="tours-grid">
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Descubre los rumbos del centro</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Elabora tu paste</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>La Peña del Zumate</p>
-          </div>
-          <div class="tour-item">
-            <h3>REAL DEL MONTE</h3>
-            <p>Mina de Acú</p>
-          </div>
-        </div>
+        <CarruselComponent />
       </section>
     </div>
   </section>
@@ -209,11 +103,12 @@
 
 <script lang="ts" setup>
 import Sidebar from '@/components/SidebarComponent.vue';
-import { ChevronDown } from 'lucide-vue-next';
+import CarruselComponent from '@/components/CarruselComponent.vue';
+import InfoComponent from '@/components/InfoComponent.vue';
+import { ChevronDown,MapPin } from 'lucide-vue-next';
 </script>
 
 <style scoped>
-/* Estilos existentes del hero section */
 .realdelmonte-container {
   position: relative;
   width: 100%;
@@ -221,6 +116,15 @@ import { ChevronDown } from 'lucide-vue-next';
   color: white;
   overflow-y: auto;
   height: 100vh;
+}
+.sidebar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  height: 100vh;
+  width: 320px;
+
 }
 
 .hero-section {
@@ -243,9 +147,8 @@ import { ChevronDown } from 'lucide-vue-next';
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 80%, transparent 100%),
-    linear-gradient(to top left, rgba(0, 0, 0, 1) 0%, transparent 30%),
-    linear-gradient(to top, transparent, rgba(0, 0, 0, 0.7) 100%); /* Cambiado de 'to bottom' a 'to top' */
+    linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.43) 40%, rgba(0, 0, 0, 0.3) 80%, transparent 100%),
+    linear-gradient(to top left, rgba(0, 0, 0, 1) 0%, transparent 30%);
   z-index: 1;
 }
 
@@ -255,11 +158,26 @@ import { ChevronDown } from 'lucide-vue-next';
   align-items: center;
   height: 100%;
   z-index: 2;
-  padding-left: 5.6rem;
+  padding-left: 35rem;
   padding-top: 2rem;
 }
 
-/* Estilos del contenido adicional */
+@media (max-width: 1400px) {
+  .content {
+    padding-left: 24rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding-left: 0;
+    margin-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 6rem;
+  }
+}
+
 .content-below {
   background:
     linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 0.9) 100%);
@@ -270,7 +188,7 @@ import { ChevronDown } from 'lucide-vue-next';
 .section-content {
   margin-bottom: 3rem;
   max-width: 1100px;
-  margin-left: auto;
+  margin-left: 12%;
   margin-right: auto;
 }
 
@@ -378,12 +296,14 @@ import { ChevronDown } from 'lucide-vue-next';
   color: #bbb;
 }
 
-/* Mantener los estilos existentes para el hero section */
+.info-mapa-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 .mapa {
-  position: absolute;
-  bottom: 12rem;
-  right: 22rem;
-  width: 320px;
+  position: relative;
+  width: 370px;
   z-index: 3;
   display: flex;
   align-items: center;
@@ -391,15 +311,14 @@ import { ChevronDown } from 'lucide-vue-next';
 }
 
 .mapa img {
-  width: 100%;
-  opacity: 0.9;
+  width: 130%;
   border-radius: 0.5rem;
 }
 
 .pin {
   position: absolute;
-  top: 46%;
-  left: 43%;
+  top: 57%;
+  left: 52%;
   font-size: 1.6rem;
   color: black;
 }
@@ -441,14 +360,14 @@ import { ChevronDown } from 'lucide-vue-next';
 }
 
 .logos img {
-  height: 60px;
+  height: 70px;
   object-fit: contain;
 }
 
 .logos-top {
   position: absolute;
   top: 4.3rem;
-  left: 56%;
+  left: 53%;
   transform: translateX(-50%);
   margin-top: 0;
   margin-bottom: 0;
@@ -458,8 +377,8 @@ import { ChevronDown } from 'lucide-vue-next';
 
 .conoce-mas-bottom {
   position: absolute;
-  left: 57%;
-  bottom: 6.9rem;
+  left: 53%;
+  bottom: 3rem;
   transform: translateX(-50%);
   margin-bottom: 0;
   z-index: 10;
@@ -490,7 +409,8 @@ import { ChevronDown } from 'lucide-vue-next';
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   max-width: 1100px;
-  margin: 0 auto 3rem;
+  margin-left: 8%;
+
 }
 
 .left-column {
