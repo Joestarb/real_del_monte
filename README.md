@@ -20,11 +20,12 @@ Desarrollar una aplicación web para ayudar a las personas a llevar un mejor con
 
 ## Integrantes
 
-- **Josue Antonio Chan Gutierrez** (Líder) - FULLSTACK
-- **Carlos Josué Oviedo Cisneros** - FULLSTACK <3
-- **Josias Efrain Kumul Quetzal** – FULLSTACK
+- **Garcia Canul Guillermo de Jesus** – (Líder) FULLSTACK
+- **Malpica Cristobal Eduardo Yael** – FULLSTACK
+- **Sanchez Lobato Gael** – FULLSTACK
+- **Chan Gutierrez Josue Antonio** – FULLSTACK
+- **Dzib Hernandez Arbey Alexis** - FULLSTACK
 - **Bolon Cifuentes Miguel Angel** – FULLSTACK
-- **Garcia Canul Guillermo de Jesus** – FULLSTACK
 
 ## Tecnologías y Librerías
 
