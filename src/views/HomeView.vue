@@ -14,16 +14,13 @@
           <img src="@/assets/PueblosM.svg" alt="Pueblos Mágicos" />
         </div>
 
-        <div class="info-box">
-          <div class="info-text">
-            <InfoComponent/>
-          </div>
-        </div>
+        <div class="info-mapa-container">
+  <InfoComponent />
+  <div class="mapa">
+    <img src="@/assets/Mexico_Map.svg" alt="Mapa de México" />
+ <MapPin class="fill-black stroke-black w-7 h-7 pin" />  </div>
+</div>
 
-        <div class="mapa">
-          <img src="@/assets/Mexico_Map.svg" alt="Mapa de México" />
-          <div class="pin">📍</div>
-        </div>
 
         <!-- Botón Conoce más -->
         <button class="conoce-mas conoce-mas-bottom">Conoce más
@@ -108,7 +105,7 @@
 import Sidebar from '@/components/SidebarComponent.vue';
 import CarruselComponent from '@/components/CarruselComponent.vue';
 import InfoComponent from '@/components/InfoComponent.vue';
-import { ChevronDown } from 'lucide-vue-next';
+import { ChevronDown,MapPin } from 'lucide-vue-next';
 </script>
 
 <style scoped>
@@ -152,9 +149,8 @@ import { ChevronDown } from 'lucide-vue-next';
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 80%, transparent 100%),
-    linear-gradient(to top left, rgba(0, 0, 0, 1) 0%, transparent 30%),
-    linear-gradient(to top, transparent, rgba(0, 0, 0, 0.7) 100%); /* Cambiado de 'to bottom' a 'to top' */
+    linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.43) 40%, rgba(0, 0, 0, 0.3) 80%, transparent 100%),
+    linear-gradient(to top left, rgba(0, 0, 0, 1) 0%, transparent 30%);
   z-index: 1;
 }
 
@@ -164,11 +160,26 @@ import { ChevronDown } from 'lucide-vue-next';
   align-items: center;
   height: 100%;
   z-index: 2;
-  margin-left: 20rem;
+  padding-left: 35rem;
   padding-top: 2rem;
 }
 
-/* Estilos del contenido adicional */
+@media (max-width: 1400px) {
+  .content {
+    padding-left: 24rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding-left: 0;
+    margin-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 6rem;
+  }
+}
+
 .content-below {
   background:
     linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 0.9) 100%);
@@ -287,12 +298,14 @@ import { ChevronDown } from 'lucide-vue-next';
   color: #bbb;
 }
 
-/* Mantener los estilos existentes para el hero section */
+.info-mapa-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 .mapa {
-  position: absolute;
-  bottom: 12rem;
-  right: 22rem;
-  width: 320px;
+  position: relative;
+  width: 370px;
   z-index: 3;
   display: flex;
   align-items: center;
@@ -300,15 +313,14 @@ import { ChevronDown } from 'lucide-vue-next';
 }
 
 .mapa img {
-  width: 100%;
-  opacity: 0.9;
+  width: 130%;
   border-radius: 0.5rem;
 }
 
 .pin {
   position: absolute;
-  top: 46%;
-  left: 43%;
+  top: 57%;
+  left: 52%;
   font-size: 1.6rem;
   color: black;
 }
@@ -350,14 +362,14 @@ import { ChevronDown } from 'lucide-vue-next';
 }
 
 .logos img {
-  height: 60px;
+  height: 70px;
   object-fit: contain;
 }
 
 .logos-top {
   position: absolute;
   top: 4.3rem;
-  left: 45%;
+  left: 53%;
   transform: translateX(-50%);
   margin-top: 0;
   margin-bottom: 0;
@@ -367,8 +379,8 @@ import { ChevronDown } from 'lucide-vue-next';
 
 .conoce-mas-bottom {
   position: absolute;
-  left: 45%;
-  bottom: 6.9rem;
+  left: 53%;
+  bottom: 3rem;
   transform: translateX(-50%);
   margin-bottom: 0;
   z-index: 10;
