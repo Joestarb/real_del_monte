@@ -109,7 +109,6 @@ import { ChevronDown,MapPin } from 'lucide-vue-next';
 </script>
 
 <style scoped>
-/* Estilos existentes del hero section */
 .realdelmonte-container {
   position: relative;
   width: 100%;
@@ -118,7 +117,6 @@ import { ChevronDown,MapPin } from 'lucide-vue-next';
   overflow-y: auto;
   height: 100vh;
 }
-/* Sidebar fijo sobre toda la página */
 .sidebar-fixed {
   position: fixed;
   top: 0;
