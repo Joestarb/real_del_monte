@@ -44,7 +44,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { getWeatherRealDelMonte } from './weatherService.ts'
+import { getWeatherRealDelMonte } from './weatherService'
 
 const weather = ref<{
   descripcion: string
